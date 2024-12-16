@@ -7,7 +7,7 @@ import { Menu } from "../../../Core/Models/Menu";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
   menus: Menu[] = [
   //  {id: 1, title: "Menu 1", description: "Description 1", image: "", approved: true, reservations: []},
@@ -18,9 +18,9 @@ export class HomeComponent implements OnInit {
   constructor(private menuService: MenuService) {}
 
   ngOnInit(): void {
-    this.menuService.getMenus().subscribe({
-
-    })
+    this.menuService.getMenus().subscribe(
+        data => this.menus = data
+    )
     // Tu peux ici filtrer les menus si tu veux seulement les menus approuvés
    // this.menus = this.menus.filter((menu) => menu.approved);
   }

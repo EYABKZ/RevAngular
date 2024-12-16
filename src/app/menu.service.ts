@@ -8,7 +8,7 @@ import { Menu } from "../Core/Models/Menu";
 })
 export class MenuService {
 
-  private apiUrl = 'http://localhost:3000/menus'; // URL du serveur json-server
+  private apiUrl = 'http://localhost:4000/menus'; // URL du serveur json-server
 
   constructor(private http: HttpClient) {}
 
