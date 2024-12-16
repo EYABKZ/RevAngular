@@ -1,0 +1,7 @@
+<p>home works!</p>
+<div *ngFor="let menu of menus">
+  <h3>{{ menu.title }}</h3>
+  <p>{{ menu.description }}</p>
+  <img [src]="menu.image" alt="{{ menu.title }}" />
+  <button (click)="reserve(menu.id)">Réserver</button>
+</div>

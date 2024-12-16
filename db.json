@@ -1,0 +1,28 @@
+{
+  "menus": [
+    {
+      "id": 1,
+      "title": "Menu de Noël",
+      "image": "assets/images/noel.jpg",
+      "description": "Un menu festif pour célébrer Noël.",
+      "approved": true,
+      "reservations": [101, 102]
+    },
+    {
+      "id": 2,
+      "title": "Menu Nouvel An",
+      "image": "assets/images/nouvelan.jpg",
+      "description": "Un menu spécial pour la nouvelle année.",
+      "approved": false,
+      "reservations": []
+    },
+    {
+      "id": 3,
+      "title": "Menu Traditionnel",
+      "image": "assets/images/R1.jpg",
+      "description": "Un menu classique pour tous les goûts.",
+      "approved": true,
+      "reservations": [103]
+    }
+  ]
+}

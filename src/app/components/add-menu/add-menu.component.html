@@ -1,0 +1,13 @@
+<form #menuForm="ngForm" (ngSubmit)="addMenu()">
+  <input type="text" placeholder="Titre" [(ngModel)]="menu.title" name="title" required />
+  <textarea placeholder="Description" [(ngModel)]="menu.description" name="description" minlength="10" required></textarea>
+  <input type="text" placeholder="Image URL" [(ngModel)]="menu.image" name="image" />
+  <button type="submit" [disabled]="menuForm.invalid">Ajouter</button>
+  <div *ngIf="menuForm.controls['title']?.errors?.['required']">
+    Le titre est obligatoire.
+  </div>
+  <div *ngIf="menuForm.controls['description']?.errors?.['minlength']">
+    La description doit contenir au moins 10 caractères.
+  </div>
+</form>
+
